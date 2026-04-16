@@ -44,9 +44,11 @@ export class AgendaController {
     container.innerHTML = "";
 
     contatos.forEach((contato) => {
-      const div = document.createElement("div");
+      const li = document.createElement("li");
+      
+      li.classList.add("contato-item");
 
-      div.innerHTML = `
+      li.innerHTML = `
         <h3>${contato.nome}</h3>
         <p>Telefone: ${contato.telefone}</p>
         <p>Email: ${contato.email}</p>

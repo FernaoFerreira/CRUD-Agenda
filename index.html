@@ -1,15 +1,67 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Agenda</title>
-     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agenda</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
-<body>
-    <h1>Agenda de Contatos</h1>
-    <div id="app"></div>
 
-    <script type="module" src="./controller/AgendaController.mjs"></script>
+<body class="bg-light">
+
+  <nav class="navbar navbar-dark bg-primary mb-4">
+    <div class="container">
+      <span class="navbar-brand">Agenda de Contatos</span>
+    </div>
+  </nav>
+
+  <div class="container">
+
+    <!-- Formulário -->
+    <div class="card mb-4">
+      <div class="card-body">
+        <h5 class="card-title">Adicionar Contato</h5>
+
+        <form id="contato-form">
+          <div class="mb-3">
+            <label class="form-label">Nome</label>
+            <input type="text" class="form-control" name="nome" required>
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label">Telefone</label>
+            <input type="text" class="form-control" name="telefone" required>
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label">Email</label>
+            <input type="email" class="form-control" name="email" required>
+          </div>
+
+          <button type="submit" class="btn btn-primary">
+            Adicionar
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Lista de Contatos -->
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Contatos</h5>
+
+        <ul id="contatos-container" class="list-group"></ul>
+
+      </div>
+    </div>
+
+  </div>
+
+  <footer class="text-center mt-4 mb-3 text-muted">
+    Desenvolvido por Fernão Q. F.
+  </footer>
+
+  <script type="module" src="./main.mjs"></script>
+
 </body>
 </html>
