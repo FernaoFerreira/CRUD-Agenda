@@ -3,7 +3,7 @@ export class Contato {
         this.nome = nome;
         this.telefone = telefone;
         this.email = email;
-        this.ID = Date.now();
+        this.ID = ID;       
     }
 }
 

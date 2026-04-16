@@ -1,4 +1,4 @@
-import { AgendaController } from "../controller/AgendaController.mjs";
+import { AgendaController } from "./controller/AgendaController.mjs";
 
 document.addEventListener("DOMContentLoaded", () => {
   new AgendaController();

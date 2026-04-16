@@ -46,7 +46,7 @@ export class AgendaController {
     contatos.forEach((contato) => {
       const li = document.createElement("li");
       
-      li.classList.add("contato-item");
+      li.classList.add("contato-item", "list-group-item");
 
       li.innerHTML = `
         <h3>${contato.nome}</h3>
@@ -55,7 +55,7 @@ export class AgendaController {
         <button data-id="${contato.ID}" class="excluir-btn">Excluir</button>
       `;
 
-      container.appendChild(div);
+      container.appendChild(li);
     });
   }
 }
